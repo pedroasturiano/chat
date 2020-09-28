@@ -15,7 +15,14 @@ class _ChatRoomState extends State<ChatRoom> {
             "assets/images/logo.png",
             height: 50,
           ),
-          actions: [Icon(Icons.exit_to_app)]),
+          actions: [
+            GestureDetector(
+              onTap: () {},
+              child: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  child: Icon(Icons.exit_to_app)),
+            )
+          ]),
     );
   }
 }
