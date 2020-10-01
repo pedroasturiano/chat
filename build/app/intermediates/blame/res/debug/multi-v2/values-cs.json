@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\pedro\\Documents\\chat\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-cs\\values-cs.xml",
+            "outputFile": "/home/pedro/Documentos/workspace/Flutter/chat/chat/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-cs/values-cs.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\pedro\\.gradle\\caches\\transforms-2\\files-2.1\\a219aaa53005fa677df3bfd14ede3871\\core-1.1.0\\res\\values-cs\\values-cs.xml",
+                    "source": "/home/pedro/.gradle/caches/transforms-2/files-2.1/a219aaa53005fa677df3bfd14ede3871/core-1.1.0/res/values-cs/values-cs.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\pedro\\.gradle\\caches\\transforms-2\\files-2.1\\afd93059767be04d2ae6a9f01b48613d\\jetified-play-services-basement-17.0.0\\res\\values-cs\\values.xml",
+                    "source": "/home/pedro/.gradle/caches/transforms-2/files-2.1/571eb639582cd2bc840398a22ef37ad1/jetified-play-services-basement-17.0.0/res/values-cs/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\pedro\\.gradle\\caches\\transforms-2\\files-2.1\\600586170946e69bbfdbb8edb0d3d534\\play-services-base-17.1.0\\res\\values-cs\\values.xml",
+                    "source": "/home/pedro/.gradle/caches/transforms-2/files-2.1/600586170946e69bbfdbb8edb0d3d534/play-services-base-17.1.0/res/values-cs/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",

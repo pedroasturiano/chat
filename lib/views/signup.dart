@@ -1,9 +1,13 @@
 import 'package:chat/services/auth.dart';
+import 'package:chat/services/database.dart';
 import 'package:chat/views/chatroomscreen.dart';
 import 'package:chat/widgets/widget.dart';
 import 'package:flutter/material.dart';
 
 class SignUp extends StatefulWidget {
+  final Function toogle;
+  SignUp(this.toogle);
+
   @override
   _SignUpState createState() => _SignUpState();
 }
@@ -14,6 +18,7 @@ class _SignUpState extends State<SignUp> {
   final formKey = GlobalKey<FormState>();
 
   AuthMethods authMethods = new AuthMethods();
+  DatabaseMethods databaseMethods = new DatabaseMethods();
 
   TextEditingController userNameTextEditingController =
       new TextEditingController();
@@ -34,6 +39,12 @@ class _SignUpState extends State<SignUp> {
           .then((val) {
         //print("${val.uid}");
 
+        Map<String, String> userInfoMap = {
+          "name": userNameTextEditingController.text,
+          "email": emailTextEditingController.text
+        };
+
+        databaseMethods.uploadUserInfo(userInfoMap);
         Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => ChatRoom()));
       });
@@ -158,12 +169,20 @@ class _SignUpState extends State<SignUp> {
                           "Already have account? ",
                           style: mediumTextStyle(),
                         ),
-                        Text(
-                          "SignIn now",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 17,
-                              decoration: TextDecoration.underline),
+                        GestureDetector(
+                          onTap: () {
+                            widget.toogle();
+                          },
+                          child: Container(
+                            padding: EdgeInsets.symmetric(vertical: 8),
+                            child: Text(
+                              "SignIn now",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 17,
+                                  decoration: TextDecoration.underline),
+                            ),
+                          ),
                         )
                       ],
                     ),
