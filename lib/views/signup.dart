@@ -29,6 +29,11 @@ class _SignUpState extends State<SignUp> {
 
   signMeUp() {
     if (formKey.currentState.validate()) {
+      Map<String, String> userInfoMap = {
+        "name": userNameTextEditingController.text,
+        "email": emailTextEditingController.text
+      };
+
       setState(() {
         isLoading = true;
       });
@@ -38,11 +43,6 @@ class _SignUpState extends State<SignUp> {
               passwordTextEditingController.text)
           .then((val) {
         //print("${val.uid}");
-
-        Map<String, String> userInfoMap = {
-          "name": userNameTextEditingController.text,
-          "email": emailTextEditingController.text
-        };
 
         databaseMethods.uploadUserInfo(userInfoMap);
         Navigator.pushReplacement(
